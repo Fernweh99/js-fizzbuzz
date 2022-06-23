@@ -1,3 +1,33 @@
-ul {
+#fizz-buzz-game {
+  padding: 100px 0;
+  background-color: lightsteelblue;
+}
+
+#block-container ul {
   list-style-type: none;
+}
+
+#block-container li {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  margin: 10px;
+}
+
+#block-container li.standard {
+  background-color: azure;
+}
+
+#block-container li.fizz-buzz {
+  background-color: lightgoldenrodyellow;
+}
+
+#block-container li.fizz {
+  background-color: lightgreen;
+}
+
+#block-container li.buzz {
+  background-color: lightskyblue;
 }

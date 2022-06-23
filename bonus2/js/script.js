@@ -11,6 +11,13 @@ BONUS 1: Crea un elemento contenitore nel DOM e aggiungendo
 i vari elementi html con il numero o la stringa corretta da mostrare.
 */
 
+/*
+BONUS 2: Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1,
+a seconda che il valore inserito sia un numero, un fizz,
+un buzz o un fizzbuzz. Se sei a corto di idee per lo stile,
+potresti prendere spunto dallo screenshot fornito in consegna.
+*/
+
 //Recupero l'elemento block-container dal DOM
 myContainerContent = document.getElementById("block-container");
 
@@ -21,20 +28,24 @@ let content = "<ul>";
 for (let i = 1 ; i <= 100 ; i++) {
   const number = i;
   let outputNumber = number;
+  let classNameLi = "standard";
 
   if ((number % 3 === 0) && (number % 5 === 0)) {
     outputNumber = "FizzBuzz";
+    classNameLi = "fizz-buzz";
   }
 
   else if (number % 3 === 0) {
     outputNumber = "Fizz";
+    classNameLi = "fizz";
   }
 
   else if (number % 5 === 0) {
     outputNumber = "Buzz";
+    classNameLi = "buzz";
   }
 
-  content += `<li>${outputNumber}</li>`;
+  content += `<li class="${classNameLi}">${outputNumber}</li>`;
   
 }
 
